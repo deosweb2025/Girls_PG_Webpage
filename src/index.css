@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+
+    /* Theme Palette */
+    --color-primary-dark: #4A1D2F;
+    --color-primary: #832B4C;
+    --color-primary-light: #B44A70;
+    --color-accent: #D48B68;
+    --color-amber-gold: #D97706;
+    --color-canvas: #FAF7F4;
+    --color-surface: #FFFFFF;
+    --color-surface-soft: #F3EDE6;
+    --color-text-main: #1E1B18;
+    --color-text-muted: #6B645C;
+    --color-border-subtle: #E8DFD5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--color-text-main);
+    background-color: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Prevent fixed navbar from covering section anchors */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 6.5rem;
+    }
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF7F4;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D5C7B8;
+    border-radius: 9999px;
+    border: 2px solid #FAF7F4;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #832B4C;
+  }
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom utility classes */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+.luxury-gradient-text {
+  background: linear-gradient(135deg, #4A1D2F 0%, #832B4C 45%, #D48B68 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-gradient-gold {
+  background: linear-gradient(135deg, #832B4C 0%, #B44A70 50%, #D48B68 100%);
+}
+
+.subtle-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 223, 213, 0.7);
+}
+
+.dark-glass {
+  background: rgba(30, 27, 24, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
