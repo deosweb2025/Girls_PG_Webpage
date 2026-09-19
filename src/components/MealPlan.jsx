@@ -6,7 +6,7 @@ const MealPlan = () => {
   const { mealPlan } = siteData;
 
   return (
-    <section id="dining" className="py-20 lg:py-28 bg-[#F3EDE6]/50 relative">
+    <section id="dining" className="py-20 lg:py-28 bg-[#FDF9FB] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeading
@@ -25,24 +25,24 @@ const MealPlan = () => {
               <div className="aspect-[4/3] sm:aspect-[1/1] overflow-hidden">
                 <img
                   src={mealPlan.image}
-                  alt="Ajanta Ladies PG community dining hall and fresh buffet setup"
+                  alt="Ladies PG community dining hall and fresh buffet setup"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
               </div>
 
-              <div className="p-6 bg-white border-t border-[#E8DFD5]">
+              <div className="p-6 bg-white border-t border-[#F0E1E8]">
                 <div className="flex items-center gap-2 text-xs font-extrabold text-[#832B4C] uppercase tracking-wider mb-2">
-                  <Sparkles className="w-4 h-4 text-amber-500" />
+                  <Sparkles className="w-4 h-4 text-[#832B4C]" />
                   <span>Unlimited Daily Food Inclusions</span>
                 </div>
-                <h4 className="text-base font-bold text-[#1E1B18] mb-3">
+                <h4 className="text-base font-bold text-[#1D1518] mb-3">
                   Nutritious Bengali & North Indian Cuisine
                 </h4>
                 
                 <div className="space-y-2">
                   {mealPlan.features.map((feat, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-[#5A534B]">
+                    <div key={idx} className="flex items-center gap-2 text-xs text-[#5C4C55]">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                       <span>{feat}</span>
                     </div>
@@ -57,31 +57,36 @@ const MealPlan = () => {
             {mealPlan.schedule.map((slot, idx) => (
               <div
                 key={idx}
-                className="p-5 sm:p-6 rounded-2xl bg-white border border-[#E8DFD5] shadow-xs hover:border-[#832B4C]/40 transition-all group"
+                className="relative overflow-hidden p-5 sm:p-6 rounded-2xl bg-white border border-[#F0E1E8] card-luxury-shadow hover:-translate-y-1 hover:border-[#832B4C]/50 transition-all group cursor-pointer"
               >
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                {/* Glossy Crystal Sheen Sweep on Card Hover */}
+                <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
+                  <div className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent card-shimmer-sweep opacity-0"></div>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2 relative z-10">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-[#832B4C]/10 text-[#832B4C] flex items-center justify-center font-bold text-xs">
+                    <div className="w-8 h-8 rounded-lg bg-[#FDF2F5] text-[#832B4C] flex items-center justify-center font-bold text-xs">
                       0{idx + 1}
                     </div>
-                    <h4 className="text-base sm:text-lg font-bold text-[#1E1B18] group-hover:text-[#832B4C] transition-colors">
+                    <h4 className="text-base sm:text-lg font-bold text-[#1D1518] group-hover:text-[#832B4C] transition-colors">
                       {slot.meal}
                     </h4>
                   </div>
 
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-[#FAF7F4] text-[#832B4C] border border-[#E8DFD5]">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-[#FDF2F5] text-[#832B4C] border border-[#F0E1E8]">
                     <Clock className="w-3 h-3" />
                     {slot.time}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#5A534B] leading-relaxed pl-10">
+                <p className="text-xs sm:text-sm text-[#5C4C55] leading-relaxed pl-10">
                   {slot.items}
                 </p>
               </div>
             ))}
 
-            <div className="pt-2 pl-2 text-xs text-[#6B645C] flex items-center gap-2">
+            <div className="pt-2 pl-2 text-xs text-[#6B5B63] flex items-center gap-2">
               <UtensilsCrossed className="w-4 h-4 text-[#832B4C]" />
               <span>Special feasts prepared on Sundays and festive occasions.</span>
             </div>

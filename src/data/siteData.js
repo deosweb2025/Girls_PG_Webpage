@@ -6,8 +6,8 @@ import washroomImg from '../assets/images/attached_washroom.jpg';
 
 export const siteData = {
   company: {
-    name: "Ajanta Luxury Ladies PG",
-    shortName: "Ajanta PG",
+    name: "Ladies PG",
+    shortName: "Ladies PG",
     tagline: "A Safe, Elegant & Homely Haven for Women in New Town Kolkata",
     establishedTag: "Trusted Accommodation at Biswa Bangla Gate",
     badge: "0% Brokerage • 100% Verified Safe Stay",
@@ -18,8 +18,8 @@ export const siteData = {
     phone: "9433359907",
     displayPhone: "+91 94333 59907",
     whatsapp: "9433359907",
-    whatsappUrl: "https://wa.me/919433359907?text=Hello%20Ajanta%20Ladies%20PG%2C%20I%20would%20like%20to%20inquire%20about%20room%20availability%20and%20rates.",
-    email: "ajantaladiespg.kolkata@gmail.com",
+    whatsappUrl: "https://wa.me/919433359907?text=Hello%20Ladies%20PG%2C%20I%20would%20like%20to%20inquire%20about%20room%20availability%20and%20rates.",
+    email: "ladiespg.newtown@gmail.com",
     visitingHours: "Mon – Sun: 09:00 AM – 08:00 PM",
     gateSecurity: "24/7 Controlled Entry with Warden On-Duty",
   },
@@ -56,34 +56,38 @@ export const siteData = {
     {
       id: "security",
       number: "01",
+      badge: "Verified Safe",
       title: "Round-the-Clock Safety",
       desc: "Female warden on-site, smart biometric entry, and 24/7 CCTV surveillance across all common corridors.",
     },
     {
       id: "food",
       number: "02",
+      badge: "Homely & Fresh",
       title: "Wholesome 4-Time Meals",
       desc: "Freshly prepared breakfast, lunch, evening tea with snacks, and dinner cooked in a spotless modular kitchen.",
     },
     {
       id: "comfort",
       number: "03",
+      badge: "Zero Setup Cost",
       title: "Fully Furnished Comfort",
       desc: "Orthopedic spring beds, individual study workstations, spacious wardrobes, and hot water geysers.",
     },
     {
       id: "connectivity",
       number: "04",
+      badge: "Beside Chowman",
       title: "Prime Biswa Bangla Gate",
       desc: "Just 1 minute walk to Chowman & Biswa Bangla Gate. Fast commute to DLF, Candor, TCS, and Sector V.",
     },
   ],
   about: {
-    badge: "THE AJANTA LIVING PHILOSOPHY",
+    badge: "PREMIUM LIVING PHILOSOPHY",
     title: "More Than Just A PG — Your Secured Second Home in Kolkata",
     lead: "Designed specifically for modern female IT professionals, corporate leaders, and university students seeking serenity and uncompromising safety.",
     paragraphs: [
-      "Relocating to a new city shouldn't mean sacrificing comfort, hygiene, or peace of mind. Situated at the iconic Biswa Bangla Gate in New Town, Ajanta Luxury Ladies PG provides an elevated residential experience that blends boutique hotel hospitality with genuine mother's kitchen warmth.",
+      "Relocating to a new city shouldn't mean sacrificing comfort, hygiene, or peace of mind. Situated at the iconic Biswa Bangla Gate in New Town, Ladies PG provides an elevated residential experience that blends boutique hotel hospitality with genuine mother's kitchen warmth.",
       "From high-speed fiber internet for uninterrupted remote work to nutritious, freshly prepared Bengali & North Indian meals, every detail is engineered so you can focus on your career and studies while we take care of daily living hassles.",
     ],
     features: [

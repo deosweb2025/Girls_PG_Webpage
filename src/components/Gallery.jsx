@@ -15,7 +15,7 @@ const Gallery = () => {
     : siteData.gallery.filter(item => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="py-20 lg:py-28 bg-[#FAF7F4] relative">
+    <section id="gallery" className="py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeading
@@ -35,7 +35,7 @@ const Gallery = () => {
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 activeFilter === cat
                   ? 'bg-[#832B4C] text-white shadow-md'
-                  : 'bg-white text-[#5A534B] border border-[#E8DFD5] hover:border-[#832B4C]'
+                  : 'bg-[#FDF9FB] text-[#6B5B63] border border-[#F0E1E8] hover:border-[#832B4C] hover:text-[#832B4C]'
               }`}
             >
               {cat}
@@ -53,7 +53,7 @@ const Gallery = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35 }}
               onClick={() => setSelectedPhoto(item)}
-              className={`group relative rounded-3xl overflow-hidden shadow-md cursor-pointer border border-[#E8DFD5] bg-white ${
+              className={`group relative rounded-3xl overflow-hidden shadow-md cursor-pointer border border-[#F0E1E8] bg-white ${
                 idx === 0 ? 'sm:col-span-2 lg:col-span-2 aspect-[16/10]' : 'aspect-[4/3]'
               }`}
             >
@@ -134,10 +134,10 @@ const Gallery = () => {
                   <span className="text-xs font-bold text-[#832B4C] uppercase tracking-wider">
                     {selectedPhoto.category}
                   </span>
-                  <h3 className="text-xl font-bold text-[#1E1B18]">
+                  <h3 className="text-xl font-bold text-[#1D1518]">
                     {selectedPhoto.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#6B645C] mt-1">
+                  <p className="text-xs sm:text-sm text-[#6B5B63] mt-1">
                     {selectedPhoto.desc}
                   </p>
                 </div>

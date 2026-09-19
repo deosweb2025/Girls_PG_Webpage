@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1E1B18] text-[#C9BFB5] pt-16 pb-12 border-t border-[#3A332C]">
+    <footer className="bg-[#1D1518] text-[#D8CAD2] pt-16 pb-12 border-t border-[#36232B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Columns */}
@@ -17,14 +17,14 @@ const Footer = () => {
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#832B4C] to-[#4A1D2F] flex items-center justify-center text-white font-serif text-xl font-bold shadow-md">
-                A
+                L
               </div>
               <span className="text-xl font-extrabold text-white tracking-tight font-sans">
-                Ajanta <span className="text-[#D48B68]">Ladies PG</span>
+                Ladies <span className="text-[#B44A70]">PG</span>
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-[#A89F95] leading-relaxed max-w-sm">
+            <p className="text-xs sm:text-sm text-[#B49EAA] leading-relaxed max-w-sm">
               A premier, safe, and modern residential sanctuary in New Town Kolkata offering fully furnished AC rooms, attached washrooms, and 4-time wholesome homely food.
             </p>
 
@@ -37,59 +37,62 @@ const Footer = () => {
           {/* Col 2: Navigation Links */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-extrabold uppercase tracking-wider text-white">
-              Explore
+              Navigation
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
+                <a href="#home" className="hover:text-white transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
                 <a href="#about" className="hover:text-white transition-colors">
-                  About Us
+                  About
                 </a>
               </li>
               <li>
-                <a href="#rooms" className="hover:text-white transition-colors">
-                  Rooms & Rent
-                </a>
-              </li>
-              <li>
-                <a href="#amenities" className="hover:text-white transition-colors">
+                <a href="#facilities" className="hover:text-white transition-colors">
                   Facilities
                 </a>
               </li>
               <li>
-                <a href="#dining" className="hover:text-white transition-colors">
-                  Food & Dining
-                </a>
-              </li>
-              <li>
                 <a href="#gallery" className="hover:text-white transition-colors">
-                  Photo Tour
+                  Gallery
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-white transition-colors">
-                  Common FAQs
+                <a href="#contact" className="hover:text-white transition-colors">
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Room Suites */}
+          {/* Col 3: Core Facilities */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-extrabold uppercase tracking-wider text-white">
-              Room Categories
+              Core Facilities
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
-              <li className="flex flex-col">
-                <span className="text-white font-semibold">Executive Single Suite</span>
-                <span className="text-[11px] text-[#A89F95]">Private AC room with attached washroom</span>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B44A70]"></span>
+                <span className="text-white">4-Time Homely Fresh Meals</span>
               </li>
-              <li className="flex flex-col">
-                <span className="text-white font-semibold">Executive Double Sharing</span>
-                <span className="text-[11px] text-[#A89F95]">Twin occupancy, personal wardrobes</span>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B44A70]"></span>
+                <span className="text-white">24/7 CCTV & Female Warden</span>
               </li>
-              <li className="flex flex-col">
-                <span className="text-white font-semibold">Comfort Triple Sharing</span>
-                <span className="text-[11px] text-[#A89F95]">Affordable student & intern living</span>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B44A70]"></span>
+                <span className="text-white">High-Speed Wi-Fi & Power Backup</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B44A70]"></span>
+                <span className="text-white">Attached Washrooms with Geyser</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B44A70]"></span>
+                <span className="text-white">Automatic Laundry & Housekeeping</span>
               </li>
             </ul>
           </div>
@@ -101,15 +104,15 @@ const Footer = () => {
             </h4>
             <div className="space-y-2.5 text-xs sm:text-sm">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#D48B68] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#B44A70] shrink-0 mt-0.5" />
                 <span className="leading-snug">
                   {siteData.location.building}, {siteData.location.street}, {siteData.location.landmark}, {siteData.location.junction}, Kolkata 700156
                 </span>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#D48B68] shrink-0" />
-                <a href={`tel:${siteData.contact.phone}`} className="text-white font-bold hover:text-[#D48B68] transition-colors">
+                <Phone className="w-4 h-4 text-[#B44A70] shrink-0" />
+                <a href={`tel:${siteData.contact.phone}`} className="text-white font-bold hover:text-[#B44A70] transition-colors">
                   {siteData.contact.displayPhone}
                 </a>
               </div>
@@ -127,8 +130,8 @@ const Footer = () => {
               </div>
 
               <div className="flex items-center gap-2.5 pt-1">
-                <Clock className="w-4 h-4 text-[#D48B68] shrink-0" />
-                <span className="text-[11px] text-[#A89F95]">
+                <Clock className="w-4 h-4 text-[#B44A70] shrink-0" />
+                <span className="text-[11px] text-[#B49EAA]">
                   Visits: {siteData.contact.visitingHours}
                 </span>
               </div>
@@ -138,7 +141,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Attribution & Copyright Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#8C8379]">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#9B8892]">
           <div>
             <p>
               © {new Date().getFullYear()} {siteData.company.name}. All rights reserved.
@@ -163,7 +166,7 @@ const Footer = () => {
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 text-xs text-white hover:text-[#D48B68] transition-colors p-1"
+              className="inline-flex items-center gap-1.5 text-xs text-white hover:text-[#B44A70] transition-colors p-1"
               aria-label="Back to top of page"
             >
               <span>Back to top</span>

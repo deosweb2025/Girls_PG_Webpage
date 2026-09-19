@@ -16,13 +16,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Rooms & Rates', href: '#rooms' },
-    { name: 'Amenities', href: '#amenities' },
-    { name: 'Food & Dining', href: '#dining' },
+    { name: 'Facilities', href: '#facilities' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Location', href: '#location' },
-    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -31,7 +28,7 @@ const Navbar = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-[#E8DFD5]/80 py-3'
+            ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-[#F0E1E8] py-3'
             : 'bg-white/80 backdrop-blur-sm border-b border-transparent py-4'
         }`}
       >
@@ -39,18 +36,18 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Brand Logo */}
             <a
-              href="#"
+              href="#home"
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#832B4C] rounded-lg"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#832B4C] to-[#4A1D2F] flex items-center justify-center text-white font-serif text-xl font-bold shadow-md group-hover:scale-105 transition-transform duration-200">
-                A
+                L
               </div>
               <div className="flex flex-col">
-                <span className="text-lg sm:text-xl font-extrabold tracking-tight text-[#1E1B18] font-sans flex items-center gap-1.5">
-                  Ajanta <span className="text-[#832B4C]">Ladies PG</span>
+                <span className="text-lg sm:text-xl font-extrabold tracking-tight text-[#1D1518] font-sans flex items-center gap-1.5">
+                  Ladies <span className="text-[#832B4C]">PG</span>
                 </span>
-                <span className="text-[11px] font-semibold text-[#6B645C] flex items-center gap-1 tracking-wide">
-                  <MapPin className="w-3 h-3 text-[#D48B68]" />
+                <span className="text-[11px] font-semibold text-[#6B5B63] flex items-center gap-1 tracking-wide">
+                  <MapPin className="w-3 h-3 text-[#832B4C]" />
                   Biswa Bangla Gate, New Town
                 </span>
               </div>
@@ -62,7 +59,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-semibold text-[#4A443E] hover:text-[#832B4C] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#832B4C] hover:after:w-full after:transition-all after:duration-200"
+                  className="text-sm font-semibold text-[#5C4C55] hover:text-[#832B4C] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#832B4C] hover:after:w-full after:transition-all after:duration-200"
                 >
                   {link.name}
                 </a>
@@ -72,19 +69,10 @@ const Navbar = () => {
             {/* Desktop Quick Actions */}
             <div className="hidden sm:flex items-center gap-3">
               <a
-                href={`tel:${siteData.contact.phone}`}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold text-[#1E1B18] bg-[#FAF7F4] border border-[#E8DFD5] hover:border-[#832B4C] hover:text-[#832B4C] transition-all"
-                title="Call Warden Directly"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#832B4C]" />
-                <span>{siteData.contact.displayPhone}</span>
-              </a>
-
-              <a
                 href={siteData.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold text-white bg-gradient-to-r from-[#832B4C] to-[#B44A70] hover:shadow-md hover:shadow-[#832B4C]/20 transition-all hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#832B4C] to-[#B44A70] hover:shadow-md hover:shadow-[#832B4C]/20 transition-all hover:scale-[1.02]"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
                 <span>WhatsApp Booking</span>
@@ -93,18 +81,10 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <div className="flex items-center gap-2 lg:hidden">
-              <a
-                href={`tel:${siteData.contact.phone}`}
-                className="p-2 text-[#832B4C] bg-[#832B4C]/10 rounded-lg sm:hidden"
-                aria-label="Call directly"
-              >
-                <Phone className="w-4 h-4" />
-              </a>
-
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 rounded-lg text-[#1E1B18] hover:bg-[#F3EDE6] focus:outline-none focus:ring-2 focus:ring-[#832B4C]"
+                className="p-2.5 rounded-lg text-[#1D1518] hover:bg-[#FDF2F5] focus:outline-none focus:ring-2 focus:ring-[#832B4C]"
                 aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
                 aria-expanded={mobileMenuOpen}
               >
@@ -135,19 +115,19 @@ const Navbar = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div>
-                <div className="flex items-center justify-between pb-4 border-b border-[#E8DFD5]">
+                <div className="flex items-center justify-between pb-4 border-b border-[#F0E1E8]">
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-lg bg-[#832B4C] flex items-center justify-center text-white font-serif font-bold text-sm">
-                      A
+                      L
                     </div>
-                    <span className="font-bold text-base text-[#1E1B18]">
-                      Ajanta Ladies PG
+                    <span className="font-bold text-base text-[#1D1518]">
+                      Ladies PG
                     </span>
                   </div>
                   <button
                     type="button"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 text-[#6B645C] hover:text-[#1E1B18] rounded-lg"
+                    className="p-2 text-[#6B5B63] hover:text-[#1D1518] rounded-lg"
                     aria-label="Close Navigation"
                   >
                     <X className="w-5 h-5" />
@@ -166,7 +146,7 @@ const Navbar = () => {
                       key={link.name}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="px-3 py-2.5 rounded-lg text-sm font-semibold text-[#1E1B18] hover:bg-[#FAF7F4] hover:text-[#832B4C] transition-colors"
+                      className="px-3 py-2.5 rounded-lg text-sm font-semibold text-[#1D1518] hover:bg-[#FDF2F5] hover:text-[#832B4C] transition-colors"
                     >
                       {link.name}
                     </a>
@@ -175,10 +155,10 @@ const Navbar = () => {
               </div>
 
               {/* Mobile Drawer Bottom CTAs */}
-              <div className="pt-6 border-t border-[#E8DFD5] space-y-3">
+              <div className="pt-6 border-t border-[#F0E1E8] space-y-3">
                 <a
                   href={`tel:${siteData.contact.phone}`}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold bg-[#FAF7F4] border border-[#E8DFD5] text-[#1E1B18]"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold bg-[#FDF2F5] border border-[#F0E1E8] text-[#1D1518]"
                 >
                   <Phone className="w-4 h-4 text-[#832B4C]" />
                   <span>Call {siteData.contact.displayPhone}</span>
@@ -194,7 +174,7 @@ const Navbar = () => {
                   <span>WhatsApp Inquiry</span>
                 </a>
 
-                <p className="text-center text-xs text-[#6B645C] pt-2">
+                <p className="text-center text-xs text-[#6B5B63] pt-2">
                   📍 Ajanta Building, Biswa Bangla Gate
                 </p>
               </div>
