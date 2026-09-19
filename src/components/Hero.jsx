@@ -114,7 +114,7 @@ const Hero = () => {
     <section
       id="home"
       ref={heroRef}
-      className="relative pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28 overflow-hidden bg-gradient-to-b from-[#FFFFFF] via-[#FDF9FB] to-[#FFFFFF]"
+      className="relative pt-24 pb-14 md:pt-28 md:pb-18 lg:pt-28 lg:pb-20 overflow-hidden bg-gradient-to-b from-[#FFFFFF] via-[#FDF9FB] to-[#FFFFFF]"
     >
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#832B4C]/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#B44A70]/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
@@ -139,8 +139,8 @@ const Hero = () => {
             </h1>
           </div>
 
-          {/* 2. Visual Card Block: Mobile Order 2, Desktop Right Col Span 2 */}
-          <div className="order-2 lg:col-span-5 lg:row-span-2 relative my-2 lg:my-0 lg:-mt-7 xl:-mt-9">
+          {/* 2. Visual Card Block: Mobile Order 2, Desktop Right Col Span 2 - Lifted to Upper Position */}
+          <div className="order-2 lg:col-span-5 lg:row-span-2 lg:self-start relative my-2 lg:my-0 lg:-mt-2 xl:-mt-4">
             <div
               ref={imageCardRef}
               className="relative rounded-3xl overflow-hidden crystal-glass-border border-4 border-white bg-[#1D1518] group"
@@ -233,19 +233,19 @@ const Hero = () => {
             </div>
 
             {/* 100% Female Campus Feature Badge - Placed below with zero overlap */}
-            <div className="mt-3.5 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-md border border-[#F0E1E8] flex items-center gap-3.5">
+            <div className="mt-3 bg-white/95 backdrop-blur-md p-3 sm:p-3.5 rounded-2xl shadow-md border border-[#F0E1E8] flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#832B4C] to-[#4A1D2F] flex items-center justify-center text-white shrink-0 shadow-xs">
                 <ShieldCheck className="w-5 h-5 text-rose-200" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xs sm:text-sm font-extrabold text-[#1D1518] truncate">
+                  <span className="text-xs sm:text-sm font-extrabold text-[#1D1518]">
                     100% Female Only Campus
                   </span>
                   <Sparkles className="w-3.5 h-3.5 text-[#832B4C] shrink-0" />
                 </div>
-                <p className="text-[11px] text-[#6B5B63] font-medium leading-tight mt-0.5 truncate">
-                  Bio-metric gate access, 24/7 CCTV surveillance & dedicated on-duty female warden.
+                <p className="text-[11px] text-[#6B5B63] font-medium leading-tight mt-0.5">
+                  Bio-metric gate, 24/7 CCTV & dedicated on-duty female warden.
                 </p>
               </div>
             </div>
