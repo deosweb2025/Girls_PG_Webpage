@@ -144,7 +144,7 @@ const Footer = () => {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#9B8892]">
           <div>
             <p>
-              © {new Date().getFullYear()} {siteData.company.name}. All rights reserved.
+              © {new Date().getFullYear()} {siteData.company.name}. 
             </p>
           </div>
 
