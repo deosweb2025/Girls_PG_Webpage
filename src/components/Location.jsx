@@ -97,7 +97,7 @@ const Location = () => {
           <div className="lg:col-span-7 bg-white p-3 rounded-3xl border border-[#E8DFD5] shadow-sm flex flex-col min-h-[420px]">
             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-[#E8DFD5]">
               <iframe
-                title="Ajanta Luxury Ladies PG Biswa Bangla Gate Kolkata Map"
+                title="Advance Luxury Advance Ladies PG Biswa Bangla Gate Kolkata Map"
                 src={location.googleMapEmbedUrl}
                 width="100%"
                 height="100%"

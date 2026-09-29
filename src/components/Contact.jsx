@@ -313,7 +313,7 @@ const Contact = () => {
 
           <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-[#F0E1E8]">
             <iframe
-              title="Ladies PG Biswa Bangla Gate Kolkata Map"
+              title="Advance Ladies PG Biswa Bangla Gate Kolkata Map"
               src={location.googleMapEmbedUrl}
               width="100%"
               height="100%"

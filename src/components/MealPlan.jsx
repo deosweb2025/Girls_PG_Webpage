@@ -25,7 +25,7 @@ const MealPlan = () => {
               <div className="aspect-[4/3] sm:aspect-[1/1] overflow-hidden">
                 <img
                   src={mealPlan.image}
-                  alt="Ladies PG community dining hall and fresh buffet setup"
+                  alt="Advance Ladies PG community dining hall and fresh buffet setup"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />

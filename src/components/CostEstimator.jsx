@@ -22,7 +22,7 @@ const CostEstimator = () => {
   const acLabel = acType === 'ac' ? 'Air Conditioned (Split AC)' : 'Non-AC';
   const durationLabel = duration === 'long' ? 'Long Stay (6+ Months)' : 'Short Term (1-3 Months)';
 
-  const whatsappMessage = `Hello Ajanta Ladies PG, I used your Cost Estimator for:
+  const whatsappMessage = `Hello Advance Ladies PG, I used your Cost Estimator for:
 - Room Type: ${sharingLabel}
 - Climate: ${acLabel}
 - Duration: ${durationLabel}

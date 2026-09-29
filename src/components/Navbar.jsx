@@ -44,7 +44,7 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-lg sm:text-xl font-extrabold tracking-tight text-[#1D1518] font-sans flex items-center gap-1.5">
-                  Ladies <span className="text-[#832B4C]">PG</span>
+                   Advance Ladies <span className="text-[#832B4C]">PG</span>
                 </span>
                 <span className="text-[11px] font-semibold text-[#6B5B63] flex items-center gap-1 tracking-wide">
                   <MapPin className="w-3 h-3 text-[#832B4C]" />
@@ -121,7 +121,7 @@ const Navbar = () => {
                       L
                     </div>
                     <span className="font-bold text-base text-[#1D1518]">
-                      Ladies PG
+                      Advance Ladies PG
                     </span>
                   </div>
                   <button

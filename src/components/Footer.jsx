@@ -20,7 +20,7 @@ const Footer = () => {
                 L
               </div>
               <span className="text-xl font-extrabold text-white tracking-tight font-sans">
-                Ladies <span className="text-[#B44A70]">PG</span>
+                Advance Ladies <span className="text-[#B44A70]">PG</span>
               </span>
             </div>
 

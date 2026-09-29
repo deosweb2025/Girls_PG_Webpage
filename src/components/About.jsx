@@ -123,7 +123,7 @@ const About = () => {
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src={siteData.about.image}
-                  alt="Ladies PG peaceful study lounge and reading area"
+                  alt="Advance Ladies PG peaceful study lounge and reading area"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
