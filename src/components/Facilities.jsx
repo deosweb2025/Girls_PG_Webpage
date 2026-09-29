@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import SectionHeading from './SectionHeading';
-import RoomCategories from './RoomCategories';
+
 import MealPlan from './MealPlan';
 import Amenities from './Amenities';
-import CostEstimator from './CostEstimator';
+
 import { BedDouble, Utensils, Sparkles, Calculator } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,10 +12,10 @@ const Facilities = () => {
 
   const tabs = [
     { id: 'all', label: 'All Facilities', icon: Sparkles },
-    { id: 'rooms', label: 'Rooms & Rates', icon: BedDouble },
-    { id: 'dining', label: 'Food & Dining', icon: Utensils },
     { id: 'amenities', label: 'Amenities & Security', icon: Sparkles },
-    { id: 'estimator', label: 'Rent Calculator', icon: Calculator },
+    { id: 'dining', label: 'Food & Dining', icon: Utensils },
+  
+   
   ];
 
   return (
@@ -66,34 +66,10 @@ const Facilities = () => {
               transition={{ duration: 0.3 }}
               className="space-y-16"
             >
-              <RoomCategories />
-              <MealPlan />
               <Amenities />
-              <CostEstimator />
-            </motion.div>
-          )}
-
-          {activeTab === 'rooms' && (
-            <motion.div
-              key="rooms"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.35 }}
-            >
-              <RoomCategories />
-            </motion.div>
-          )}
-
-          {activeTab === 'dining' && (
-            <motion.div
-              key="dining"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.35 }}
-            >
               <MealPlan />
+             
+             
             </motion.div>
           )}
 
@@ -109,17 +85,21 @@ const Facilities = () => {
             </motion.div>
           )}
 
-          {activeTab === 'estimator' && (
+          {activeTab === 'dining' && (
             <motion.div
-              key="estimator"
+              key="dining"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
             >
-              <CostEstimator />
+              <MealPlan />
             </motion.div>
           )}
+
+          
+
+        
         </AnimatePresence>
 
       </div>
